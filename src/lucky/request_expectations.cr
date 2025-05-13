@@ -14,6 +14,7 @@ module Lucky::RequestExpectations
     send_json(status, expected)
   end
 
+  # :ditto:
   def send_json(status, expected : NamedTuple)
     SendJsonExpectation.new(status, expected.to_json)
   end
